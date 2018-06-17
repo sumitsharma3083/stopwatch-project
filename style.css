@@ -1,0 +1,65 @@
+        body
+        {
+        font-family: 'Rancho', cursive;
+            background-color: 	#3e0074;
+            color: #fff;
+        }
+        #mydiv
+        {
+            background-color: 	#a360fb;
+            padding: 60px;
+            text-align: center;
+            display: inline-block;
+            padding-top: 30px;
+            padding-bottom: 30px;
+            border-radius: 200px 200px 200px 200px;
+-moz-border-radius: 200px 200px 200px 200px;
+-webkit-border-radius: 200px 200px 200px 200px;
+border: 0px solid #000000;
+       -webkit-box-shadow: 21px 0px 79px -4px rgba(0,0,0,0.75);
+-moz-box-shadow: 21px 0px 79px -4px rgba(0,0,0,0.75);
+box-shadow: 21px 0px 79px -4px rgba(0,0,0,0.75);
+
+          
+        }
+        h1
+        {
+            
+            display: inline-block;
+            
+        }
+        #mm,#ss,#hr
+        {
+            
+            box-sizing: border-box;
+            padding: 10px;
+            margin: 20px;
+            font-size: 70px;
+            box-sizing: border-box;
+        }
+        #text
+        {
+          display: block;
+         text-align: center;
+            margin-top: 30px;
+            font-size: 60px;
+        }
+        .container
+        {
+            text-align: center;
+            margin-top: 40px;
+        }
+        #inner
+        {
+            padding-bottom: 30px;
+        }
+        #start,#stop,#clear
+        {
+            background-color: transparent;
+            border: none;
+            font-size: 30px;
+        }
+        .dot
+        {
+            font-size: 70px;
+        }

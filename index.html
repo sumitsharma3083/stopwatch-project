@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Stopwatch | Project in js</title>
+      
+       <link href="https://fonts.googleapis.com/css?family=Rancho" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+     <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+      <h1 id="text">StopWatch Project</h1>
+      <div class="container">
+         
+     <div id="mydiv">
+        <div id="inner">
+          <h1 id="hr">0</h1><h1 class="dot">:</h1><h1 id="mm">0</h1><h1 class="dot">:</h1><h1 id="ss">0</h1>
+       </div>
+     
+        <br><button id="start"><i class="fas fa-play-circle"></i>
+       </button>
+        <button id="stop">Pause</button>
+       <button id="clear"><i class="far fa-stop-circle"></i>
+       </button>
+    </div>
+         
+         
+          
+      </div>
+    <script>
+      
+      //The script for stopwatch project  
+    var second=      document.getElementById('ss');
+    var minutes=                document.getElementById('mm');
+     var input= document.getElementById('myinput');   
+     var hour = document.getElementById('hr');
+     var stop = document.getElementById('stop');
+      var start = document.getElementById('start');
+        var valmin= 0;
+   start.addEventListener('click',mystart); stop.addEventListener('click',mystop); 
+        var clear = document.getElementById('clear');
+        var myid;
+        var valhour = 0;
+        function mystart()
+        {
+      if(Number(second.innerHTML)== 0)
+          {
+          myid=setInterval(myfun,1000);
+          }
+            
+        }
+        function myfun()
+        {
+    
+         var val =
+         Number(second.innerHTML); 
+         second.innerHTML = val+1;
+            
+            if(second.innerHTML% 60 == 0)
+                {
+                    valmin += 1;
+            minutes.innerHTML =  valmin;
+              second.innerHTML = 0;
+                }
+            if(Number(minutes.innerHTML)== 60)
+                {
+                     valhour +=1;
+                hour.innerHTML =  valhour;
+                    minutes.innerHTML = 0;
+                }
+            
+       
+        }
+        function mystop()
+        {
+            
+       if(Number(second.innerHTML) != 0 )
+           {
+                 if(stop.innerHTML == 'Pause')
+               {
+                stop.innerHTML = 'Resume';
+                clearInterval(myid);  
+               
+               }
+            else
+               {
+                   
+              mystart();
+            function mystart()
+            {
+           
+            myid=setInterval(myfun,1000);
+               
+            
+            }
+           function myfun()
+            {
+    
+          var val =
+          Number(second.innerHTML); 
+          second.innerHTML = val+1;
+            
+            if(second.innerHTML% 60 == 0)
+                {
+                    valmin += 1;
+            minutes.innerHTML =  valmin;
+              second.innerHTML = 0;
+                    
+                }
+       
+               
+                   
+           }
+           
+            stop.innerHTML = 'Pause';
+             }
+             }
+               
+           }
+          
+ clear.addEventListener('click',clearfun);
+     
+        function clearfun()
+        {
+            if(Number(second.innerHTML) != 0)
+                {
+                 minutes.innerHTML = 00;
+                 second.innerHTML = 00;
+                    clearInterval(myid);
+                }
+            
+        }
+    </script>
+</body>
+</html>
